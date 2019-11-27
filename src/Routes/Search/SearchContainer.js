@@ -13,7 +13,7 @@ export default class extends React.Component{
     };
     // 여기에다 모든 로직 추가 (api가져오고 error 처리)
 
-    handleSubmit = (event) =>{   // input 값을 검색하고 리턴값을 받을때 작동
+    handleSubmit = (event) =>{   // 제출이벤트
        console.log(event);
         event.preventDefault(); // 값을 전송할때 페이지가 새로침된다. 그럼 이때 state값이 다 초기화 되는 것을 방지
 

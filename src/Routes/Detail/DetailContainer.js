@@ -33,8 +33,8 @@ export default class extends React.Component{
         console.log(id, typeof id); // id는 String으로 들어오는걸확인(숫자인지확인 필요)
        
         const parseId = parseInt(id);   // id를 숫자타입으로 변경
-        if(isNaN(parseId)){    // id가 숫자가 아니라면
-           return push("/");          // 홈으로 돌린다
+        if(isNaN(parseId)){             // id가 숫자가 아니라면
+           return push("/");            // 홈으로 돌린다
         }
 
         const { isMovie } = this.state;

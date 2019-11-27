@@ -8,7 +8,8 @@ import Poster from "Components/Poster";
 
 
 const Container = styled.div`
-    padding: 0px 20px;
+    padding:20px;
+
 `;
 
 const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => 
@@ -17,17 +18,15 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
             { nowPlaying && nowPlaying.length > 0 && (  
                 <Section title="Now Playing">
                     {nowPlaying.map(movie=>
-                     
                       <Poster
                             key={movie.id}
                             id={movie.id} 
-                            imgageUrl={movie.poster_path}
+                            imageUrl={movie.poster_path}
                             title={movie.original_title}
                             rating = {movie.vote_average}
                             isMovie={true}
                             year={movie.release_date.substring(0, 4)} //"yyyy-mm-dd" 중 yyyy만 추리기, release_date가 undefined경우 회피
                         />
-                        
                     )}
                 </Section>
             )} {/* 트리플체크 : nowPlaying이 오고 section이 랜더링 되는지*/}
@@ -38,7 +37,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
                         <Poster
                             key={movie.id}
                             id={movie.id} 
-                            imgageUrl={movie.poster_path}
+                            imageUrl={movie.poster_path}
                             title={movie.original_title}
                             rating = {movie.vote_average}
                             isMovie={true}
@@ -55,7 +54,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
                         <Poster
                             key={movie.id}
                             id={movie.id} 
-                            imgageUrl={movie.poster_path}
+                            imageUrl={movie.poster_path}
                             title={movie.original_title}
                             rating = {movie.vote_average}
                             isMovie={true}
